@@ -32,3 +32,8 @@ Feature: Calculations
       | first | second | expected | comment          |
       | -5    | -3     | 15       | Negative numbers |
       | 6     | 2      | 12       | Positive numbers |
+      | 6     | 2      | 12       | Positive numbers |
+      | 6     | 2      | 12       | Positive numbers |
+      | 6     | 2      | 12       | Positive numbers |
+      | 6     | 2      | 12       | Positive numbers |
+      | 6     | 2      | 12       | Positive numbers |
