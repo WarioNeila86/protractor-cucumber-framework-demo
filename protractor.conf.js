@@ -12,7 +12,10 @@ exports.config = {
 
     SELENIUM_PROMISE_MANAGER: false,
 
-    directConnect: true,
+    directConnect: false,
+    seleniumAddress: 'http://localhost:4444',
+
+    restartBrowserBetweenTests: true,
 
     // https://github.com/angular/protractor/blob/master/docs/timeouts.md
     allScriptsTimeout: 110000,
