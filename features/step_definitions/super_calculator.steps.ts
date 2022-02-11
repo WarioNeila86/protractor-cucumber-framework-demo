@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert'
-import { Given, Then, When } from '@cucumber/cucumber'
+import { Given, Then, When } from 'cucumber'
 import { browser, by, element } from 'protractor'
 
 // PLEASE NOTE:
