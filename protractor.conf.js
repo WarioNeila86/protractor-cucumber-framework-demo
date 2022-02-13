@@ -1,9 +1,10 @@
 const
     { ConsoleReporter } = require('@serenity-js/console-reporter'),
-    { ArtifactArchiver } = require('@serenity-js/core'),
+    { ArtifactArchiver, StreamReporter } = require('@serenity-js/core'),
     { Photographer, TakePhotosOfInteractions } = require('@serenity-js/protractor'),
     { SerenityBDDReporter } = require('@serenity-js/serenity-bdd'),
-    isCI = require('is-ci');
+    isCI = require('is-ci'),
+    fs = require('fs');
 
 exports.config = {
     baseUrl: 'https://juliemr.github.io/',
@@ -36,6 +37,7 @@ exports.config = {
             Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
             // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
             new SerenityBDDReporter(),
+            new StreamReporter(fs.createWriteStream(`./out-${ + new Date() }.log`))
         ]
     },
 
